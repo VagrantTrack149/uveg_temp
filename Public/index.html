@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciberseguridad básica para estudiantes</title>
+  <link href="./css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <header class="bg-blue-700 text-white p-6 text-center">
+    <h1 class="text-3xl font-bold">Ciberseguridad básica para estudiantes</h1>
+    <p class="text-sm mt-2">Aprende cómo protegerte en el mundo digital</p>
+  </header>
+
+  <main class="max-w-3xl mx-auto p-6 space-y-6">
+    <section>
+      <h2 class="text-xl font-semibold mb-2">¿Qué aprenderás?</h2>
+      <ul class="list-disc list-inside">
+        <li>Buenas prácticas para contraseñas seguras.</li>
+        <li>Cómo detectar correos falsos (phishing).</li>
+        <li>Uso seguro de redes y dispositivos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Mini Quiz</h2>
+      <p class="mb-4">¿Cuál de las siguientes contraseñas es más segura?</p>
+      <button class="quiz-btn bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2 w-full">123456</button>
+      <button class="quiz-btn bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2 w-full">Password123</button>
+      <button class="quiz-btn bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded w-full">Jk#7uT!9pL</button>
+      <p id="quiz-result" class="mt-3 font-semibold"></p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2">Consejos rápidos</h2>
+      <button id="toggle-btn" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">Mostrar / Ocultar consejos</button>
+      <ul id="tips" class="hidden mt-3 list-disc list-inside">
+        <li>No compartas tus contraseñas.</li>
+        <li>Evita conectarte a redes Wi-Fi públicas.</li>
+        <li>Actualiza tus dispositivos regularmente.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
