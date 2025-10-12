@@ -6,42 +6,83 @@
   <title>Ciberseguridad básica para estudiantes</title>
   <link href="./css/styles.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-  <header class="bg-blue-700 text-white p-6 text-center">
-    <h1 class="text-3xl font-bold">Ciberseguridad básica para estudiantes</h1>
-    <p class="text-sm mt-2">Aprende cómo protegerte en el mundo digital</p>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <div class="flex items-center gap-3">
+        <div class="bg-white text-gray-800 px-4 py-2 font-bold rounded">LOGO</div>
+        <h1 class="text-xl font-semibold">Ciberseguridad básica para estudiantes</h1>
+      </div>
+    </div>
   </header>
 
-  <main class="max-w-3xl mx-auto p-6 space-y-6">
-    <section>
-      <h2 class="text-xl font-semibold mb-2">¿Qué aprenderás?</h2>
-      <ul class="list-disc list-inside">
-        <li>Buenas prácticas para contraseñas seguras.</li>
-        <li>Cómo detectar correos falsos (phishing).</li>
-        <li>Uso seguro de redes y dispositivos.</li>
-      </ul>
+  <!-- Sección principal -->
+  <main class="container mx-auto px-6 py-10">
+    <!-- Qué es la ciberseguridad -->
+    <section class="bg-gray-200 rounded-lg p-6 mb-10">
+      <h2 class="text-2xl font-semibold mb-4">¿Qué es la ciberseguridad?</h2>
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="w-full md:w-1/3 bg-white h-48 flex items-center justify-center rounded shadow">
+          <span class="text-gray-500">[Imagen ilustrativa]</span>
+        </div>
+        <div class="w-full md:w-2/3">
+          <p class="leading-relaxed">
+            La ciberseguridad es el conjunto de prácticas y herramientas diseñadas para proteger la información,
+            los dispositivos y las redes frente a ataques o accesos no autorizados. Es fundamental para mantener
+            la privacidad, la integridad y la disponibilidad de los datos personales y académicos.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2 class="text-xl font-semibold mb-2">Mini Quiz</h2>
-      <p class="mb-4">¿Cuál de las siguientes contraseñas es más segura?</p>
-      <button class="quiz-btn bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2 w-full">123456</button>
-      <button class="quiz-btn bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2 w-full">Password123</button>
-      <button class="quiz-btn bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded w-full">Jk#7uT!9pL</button>
-      <p id="quiz-result" class="mt-3 font-semibold"></p>
+    <!-- Lecciones -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-6">Lecciones</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-bold mb-2">Lección 1</h3>
+          <a href="/pages/quiz.html">Prueba</a>
+          <p>Introducción a la ciberseguridad: conceptos básicos y buenas prácticas en línea.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-bold mb-2">Lección 2</h3> 
+          <p>Protección de contraseñas y cuentas: cómo crear contraseñas seguras y evitar el robo de identidad.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-bold mb-2">Lección 3</h3>
+          <p>Seguridad en redes sociales: cómo mantener tu información privada y reconocer estafas digitales.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2 class="text-xl font-semibold mb-2">Consejos rápidos</h2>
-      <button id="toggle-btn" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">Mostrar / Ocultar consejos</button>
-      <ul id="tips" class="hidden mt-3 list-disc list-inside">
-        <li>No compartas tus contraseñas.</li>
-        <li>Evita conectarte a redes Wi-Fi públicas.</li>
-        <li>Actualiza tus dispositivos regularmente.</li>
-      </ul>
+    <!-- Contenido recomendado -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+      <div class="bg-cyan-100 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-3">Contenido recomendado</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Guía: Cómo proteger tu información en línea</li>
+          <li>Video: Qué hacer si tu cuenta fue hackeada</li>
+          <li>Artículo: Los ciberataques más comunes en estudiantes</li>
+        </ul>
+      </div>
+
+      <div class="bg-yellow-100 p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-3">Contenido recomendado</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Podcast: Historias reales de ciberseguridad</li>
+          <li>Curso gratuito: Introducción a la seguridad digital</li>
+          <li>Infografía: Cómo detectar correos falsos</li>
+        </ul>
+      </div>
     </section>
   </main>
 
-  <script src="./js/main.js"></script>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p class="text-sm">Datos de contacto: contacto@ciberseguridadestudiantes.com | © 2025 Ciberseguridad Edu</p>
+  </footer>
+
 </body>
 </html>

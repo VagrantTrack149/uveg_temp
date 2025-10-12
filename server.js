@@ -1,11 +1,17 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
+const path = require('path');
+app.use(express.static('Public'));
+app.use(express.static(path.join(__dirname, 'src')));
 
-app.use(express.static('public'));
-
+// Ruta principal
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(path.join(__dirname, 'src/index.html'));
+});
+
+app.get('/quiz', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/quiz.html'));
 });
 
 app.listen(PORT, () => {
