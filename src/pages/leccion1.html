@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 1: Introducción a la Ciberseguridad</title>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/animation.css">
+    <script src="/js/main.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-800 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <div class="flex items-center gap-3">
+        <div class="bg-white text-gray-800 px-4 py-2 font-bold rounded"><a href="/index.html"><img src="/img/logo.png" class="w-10 h-10 -p-4"></a></div>
+        <h1 class="text-xl font-semibold">Ciberseguridad básica para estudiantes</h1>
+      </div>
+    </div>
+  </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <div class="flex items-center text-sm text-gray-500 mb-6">
+            <a href="#" class="hover:text-blue-600">Inicio</a>
+            <span class="mx-2">></span>
+            <a href="#" class="hover:text-blue-600">Lecciones</a>
+            <span class="mx-2">></span>
+            <span class="text-blue-600">Lección 1</span>
+        </div>
+
+        <!-- Lesson Header -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                    <h1 class="text-3xl font-bold text-blue-800 mb-2">Lección 1: Introducción a la Ciberseguridad</h1>
+                    <p class="text-gray-600">Aprende los conceptos básicos de ciberseguridad y por qué es importante para los estudiantes.</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <div class="flex items-center bg-blue-50 rounded-lg px-4 py-2">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-3">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Tiempo estimado</p>
+                            <p class="font-medium">15 minutos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mt-6">
+                <div class="flex justify-between text-sm text-gray-600 mb-1">
+                    <span>Progreso de la lección</span>
+                    <span>50%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 50%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lesson Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Introduction -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-blue-800 mb-4">¿Qué es la Ciberseguridad?</h2>
+                    <p class="text-gray-700 mb-4">
+                        La ciberseguridad es la práctica de proteger sistemas, redes y programas de ataques digitales. 
+                        Estos ciberataques suelen tener como objetivo acceder, cambiar o destruir información confidencial; 
+                        extorsionar a los usuarios o interrumpir la continuidad del negocio.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        En el mundo actual, donde la tecnología está integrada en casi todos los aspectos de nuestra vida, 
+                        la ciberseguridad se ha vuelto esencial para proteger nuestra información personal, 
+                        nuestra privacidad y nuestra identidad digital.
+                    </p>
+                    
+                    <!-- Interactive Element: Drag and Drop Security Concepts -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-4">Conceptos Clave de Ciberseguridad</h3>
+                        <p class="text-gray-600 mb-4">Arrastra cada concepto a su definición correcta:</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="drag-area" id="drag-area-1">
+                                <p class="text-gray-500">Arrastra aquí: <span class="font-medium">Confidencialidad</span></p>
+                            </div>
+                            <div class="drag-area" id="drag-area-2">
+                                <p class="text-gray-500">Arrastra aquí: <span class="font-medium">Integridad</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg cursor-move draggable" draggable="true" data-concept="confidentiality">
+                                Garantizar que la información solo sea accesible para aquellos autorizados
+                            </div>
+                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg cursor-move draggable" draggable="true" data-concept="integrity">
+                                Mantener la exactitud y completitud de la información
+                            </div>
+                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg cursor-move draggable" draggable="true" data-concept="availability">
+                                Garantizar que los sistemas estén disponibles cuando se necesiten
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Why Cybersecurity Matters -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-blue-800 mb-4">¿Por qué es importante la Ciberseguridad para los estudiantes?</h2>
+                    <p class="text-gray-700 mb-4">
+                        Como estudiante, utilizas internet para investigar, comunicarte, realizar tareas y acceder a recursos educativos. 
+                        Sin embargo, también estás expuesto a diversos riesgos en línea.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white mr-3">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3 class="font-semibold text-blue-800">Protege tu información personal</h3>
+                            </div>
+                            <p class="text-gray-700 text-sm">
+                                Evita el robo de identidad y el uso no autorizado de tus datos personales.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white mr-3">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <h3 class="font-semibold text-blue-800">Protege tus dispositivos</h3>
+                            </div>
+                            <p class="text-gray-700 text-sm">
+                                Previene malware y virus que pueden dañar tu computadora, tablet o smartphone.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white mr-3">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <h3 class="font-semibold text-blue-800">Mantén tu trabajo académico seguro</h3>
+                            </div>
+                            <p class="text-gray-700 text-sm">
+                                Protege tus proyectos, tareas e investigaciones de pérdida o corrupción.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white mr-3">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <h3 class="font-semibold text-blue-800">Protege la red de tu institución</h3>
+                            </div>
+                            <p class="text-gray-700 text-sm">
+                                Un dispositivo infectado puede poner en riesgo toda la red educativa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive Game: Password Strength -->
+                <div class="game-container p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-blue-800 mb-4">Juego: Crea una Contraseña Segura</h2>
+                    <p class="text-gray-700 mb-4">
+                        Una contraseña segura es tu primera línea de defensa contra accesos no autorizados. 
+                        Intenta crear una contraseña fuerte y observa cómo mejora su nivel de seguridad.
+                    </p>
+                    
+                    <div class="max-w-md mx-auto">
+                        <div class="mb-4">
+                            <label for="password-input" class="block text-gray-700 mb-2">Escribe tu contraseña:</label>
+                            <input type="text" id="password-input" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe una contraseña...">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>Seguridad de la contraseña:</span>
+                                <span id="password-strength-text">Débil</span>
+                            </div>
+                            <div class="password-strength-meter">
+                                <div id="password-strength-fill" class="password-strength-fill bg-red-500" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg border border-gray-200">
+                            <h3 class="font-semibold text-blue-700 mb-2">Consejos para una contraseña segura:</h3>
+                            <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1">
+                                <li>Usa al menos 12 caracteres</li>
+                                <li>Combina letras mayúsculas y minúsculas</li>
+                                <li>Incluye números y símbolos especiales</li>
+                                <li>Evita información personal fácil de adivinar</li>
+                                <li>No uses la misma contraseña para múltiples cuentas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <!-- Lesson Navigation -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                    <h3 class="text-lg font-bold text-blue-800 mb-4">Lecciones</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center bg-blue-50 text-blue-700 font-medium p-3 rounded-lg">
+                            <span class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm mr-3">1</span>
+                            Introducción a la Ciberseguridad
+                        </li>
+                        <li class="flex items-center text-gray-600 p-3 rounded-lg hover:bg-gray-50">
+                            <span class="w-6 h-6 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-sm mr-3">2</span>
+                            Tipos de Amenazas Cibernéticas y Contraseñas
+                        </li>
+                        <li class="flex items-center text-gray-600 p-3 rounded-lg hover:bg-gray-50">
+                            <span class="w-6 h-6 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-sm mr-3">3</span>
+                            Navegación Segura en Internet
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                    <h3 class="text-lg font-bold text-blue-800 mb-4">Recursos Adicionales</h3>
+                    <div class="space-y-4">
+                        <a href="#" class="flex items-center text-gray-700 hover:text-blue-600">
+                            <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center text-red-600 mr-3">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <span>Video: Conceptos Básicos de Ciberseguridad</span>
+                        </a>
+                        <a href="#" class="flex items-center text-gray-700 hover:text-blue-600">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mr-3">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <span>PDF: Guía de Seguridad Digital</span>
+                        </a>
+                        <a href="#" class="flex items-center text-gray-700 hover:text-blue-600">
+                            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mr-3">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <span>Enlaces de Referencia</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Next Steps -->
+                <div class="bg-blue-50 rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-blue-800 mb-3">¿Listo para continuar?</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Completa esta lección y pasa a la siguiente para aprender sobre los diferentes tipos de amenazas cibernéticas.
+                    </p>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium flex items-center justify-center">
+                        <span><a href="/pages/quiz.html">Realizar test de aprendizaje</a></span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Ciberseguridad Básica para Estudiantes</h3>
+                    <p class="text-gray-400">
+                        Un curso diseñado para ayudar a los estudiantes a comprender y aplicar conceptos básicos de ciberseguridad en su vida digital.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Inicio</a></li>
+                        <li><a href="#" class="hover:text-white">Lecciones</a></li>
+                        <li><a href="#" class="hover:text-white">Quiz</a></li>
+                        <li><a href="#" class="hover:text-white">Recursos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>info@ciberseguridadestudiantes.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Ciberseguridad Básica para Estudiantes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

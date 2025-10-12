@@ -10,8 +10,14 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/index.html'));
 });
 
+app.use('/pages', express.static(path.join(__dirname, 'src', 'Pages')));
+
 app.get('/quiz', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/pages/quiz.html'));
+});
+
+app.get('/introduccion', (req, res) => {
+  res.sendFile(path.join(__dirname, 'src/pages/leccion1.html'));
 });
 
 app.listen(PORT, () => {
