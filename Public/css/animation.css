@@ -53,3 +53,27 @@
             background-color: #3b82f6;
             transition: width 0.5s ease;
         }
+        .email-example {
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .email-example:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .correct {
+            border-color: #10b981;
+            background-color: #d1fae5;
+        }
+        .incorrect {
+            border-color: #ef4444;
+            background-color: #fee2e2;
+        }
+        .selected {
+            border-color: #3b82f6;
+            background-color: #bfdbfe;
+        }

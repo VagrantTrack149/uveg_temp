@@ -1,3 +1,9 @@
+//
+// ARCHIVO NO FUNCIONAL
+//
+//
+
+
 // Quiz interactivo
 const quizButtons = document.querySelectorAll('.quiz-btn');
 const result = document.getElementById('quiz-result');
