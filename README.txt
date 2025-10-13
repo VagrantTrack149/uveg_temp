@@ -6,6 +6,9 @@ Tecnologías utilizadas:
 Descripción del recurso:
 Este proyecto es una aplicación web simple construida con Node.js y Tailwind CSS utilizando la interfaz de línea de comandos (CLI) de Tailwind. No requiere conexión a base de datos y está orientado a servir contenido estático y estilos modernos con Tailwind.
 
+Video ilustrativo:
+https://youtu.be/eEm6gOWaguM
+
 Cómo visualizarlo o ejecutarlo en un navegador web:
 
 Paso 1: Asegúrate de tener instalado Node.js en tu computadora. Puedes descargarlo desde https://nodejs.org/
