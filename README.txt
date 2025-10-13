@@ -12,7 +12,7 @@ https://youtu.be/eEm6gOWaguM
 Cómo visualizarlo o ejecutarlo en un navegador web:
 
 Paso 1: Asegúrate de tener instalado Node.js en tu computadora. Puedes descargarlo desde https://nodejs.org/
-Paso 2: Abre una terminal y ubícate en el directorio del proyecto '/UVEG_PRUEBA_TEMP'.
+Paso 2: Abre una terminal y ubícate en el directorio del proyecto '/UVEG_PRUEBA_TEMP/'.
 Paso 3: Ejecuta el comando 'npm install' para instalar las dependencias necesarias.
 Paso 4: Una vez finalizada la instalación, ejecuta el comando 'npm run start' para iniciar el servidor local.
 Paso 5: Abre tu navegador web y accede a 'http://localhost:3000' para visualizar la aplicación.
