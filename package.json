@@ -10,7 +10,7 @@
     "dev": "nodemon server.js",
     "build:css": "npx tailwindcss -i ./src/styles/input.css -o ./public/css/styles.css --watch",
     "start": "node server.js",
-    "devdev": "node server.js & npx tailwindcss -i ./src/styles/input.css -o ./public/css/styles.css --watch"
+    "devdev": "nodemon server.js & npx tailwindcss -i ./src/styles/input.css -o ./public/css/styles.css --watch"
   },
   "dependencies": {
     "express": "^5.1.0"

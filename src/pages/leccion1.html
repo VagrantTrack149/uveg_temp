@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/animation.css">
-    <script src="/js/main.js"></script>
+    <!--<script src="/js/main.js"></script>-->
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
@@ -96,13 +96,13 @@
                         </div>
                         
                         <div class="flex flex-wrap gap-3">
-                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg cursor-move draggable" draggable="true" data-concept="confidentiality">
+                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg cursor-move draggable" draggable="true" data-concept="confidencialidad">
                                 Garantizar que la información solo sea accesible para aquellos autorizados
                             </div>
-                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg cursor-move draggable" draggable="true" data-concept="integrity">
+                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg cursor-move draggable" draggable="true" data-concept="integridad">
                                 Mantener la exactitud y completitud de la información
                             </div>
-                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg cursor-move draggable" draggable="true" data-concept="availability">
+                            <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg cursor-move draggable" draggable="true" data-concept="disponibilidad">
                                 Garantizar que los sistemas estén disponibles cuando se necesiten
                             </div>
                         </div>
@@ -179,7 +179,7 @@
                     <div class="max-w-md mx-auto">
                         <div class="mb-4">
                             <label for="password-input" class="block text-gray-700 mb-2">Escribe tu contraseña:</label>
-                            <input type="text" id="password-input" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe una contraseña...">
+                            <input type="text" id="contra-input" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe una contraseña...">
                         </div>
                         
                         <div class="mb-4">
@@ -301,9 +301,109 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-                <p>&copy; 2023 Ciberseguridad Básica para Estudiantes. Todos los derechos reservados.</p>
+                <p>&copy;Ciberseguridad Básica para Estudiantes. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+    <script>
+        
+ // Password Strength Checker
+document.getElementById('contra-input').addEventListener('input', function() {
+        const password = this.value;
+        console.log(password);
+        let strength = 0;
+        let strengthText = 'Débil';
+        let strengthColor = 'bg-red-500';
+        let width = 20;
+        // Length check
+        if (password.length >= 8) strength += 1;
+        if (password.length >= 12) strength += 1;
+            
+        // Character variety checks
+        if (/[a-z]/.test(password)) strength += 1;
+        if (/[A-Z]/.test(password)) strength += 1;
+        if (/[0-9]/.test(password)) strength += 1;
+        if (/[^A-Za-z0-9]/.test(password)) strength += 1;
+          
+            // Determine strength level
+        if (strength >= 5) {
+            strengthText = 'Muy Fuerte';
+            strengthColor = 'bg-green-500';
+            width = 100;
+        } else if (strength >= 4) {
+            strengthText = 'Fuerte';
+            strengthColor = 'bg-green-400';
+            width = 80;
+        } else if (strength >= 3) {
+            strengthText = 'Moderada';
+            strengthColor = 'bg-yellow-500';
+            width = 60;
+        } else if (strength >= 2) {
+            strengthText = 'Débil';
+            strengthColor = 'bg-orange-500';
+            width = 40;
+        }
+            
+            // Update UI
+            document.getElementById('password-strength-text').textContent = strengthText;
+            const fillElement = document.getElementById('password-strength-fill');
+            fillElement.className = `password-strength-fill ${strengthColor}`;
+            fillElement.style.width = `${width}%`;
+        });
+        
+        // Drag and Drop functionality
+        const draggables = document.querySelectorAll('.draggable');
+        const dropAreas = document.querySelectorAll('.drag-area');
+        
+        draggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', () => {
+                draggable.classList.add('dragging');
+            });
+            
+            draggable.addEventListener('dragend', () => {
+                draggable.classList.remove('dragging');
+                dropAreas.forEach(area => area.classList.remove('active'));
+            });
+        });
+        
+        dropAreas.forEach(area => {
+            area.addEventListener('dragover', e => {
+                e.preventDefault();
+                area.classList.add('active');
+            });
+            
+            area.addEventListener('dragleave', () => {
+                area.classList.remove('active');
+            });
+            
+            area.addEventListener('drop', e => {
+                e.preventDefault();
+                area.classList.remove('active');
+                
+                const draggable = document.querySelector('.dragging');
+                if (draggable) {
+                    const concept = draggable.getAttribute('data-concept');
+                    const targetConcept = area.querySelector('span').textContent.toLowerCase().trim();
+                    
+                    if (concept === targetConcept) {
+                        area.innerHTML = '';
+                        area.appendChild(draggable);
+                        draggable.classList.remove('cursor-move');
+                        draggable.setAttribute('draggable', 'false');
+                        area.style.backgroundColor = '#d1fae5';
+                        area.style.borderColor = '#10b981';
+                    } else {
+                        // Incorrect match - provide feedback
+                        area.style.backgroundColor = '#fee2e2';
+                        area.style.borderColor = '#ef4444';
+                        setTimeout(() => {
+                            area.style.backgroundColor = '';
+                            area.style.borderColor = '';
+                        }, 1000);
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

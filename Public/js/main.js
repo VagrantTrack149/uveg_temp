@@ -15,50 +15,50 @@ quizButtons.forEach(btn => {
 });
 
 // Mostrar/Ocultar consejos
-const toggleBtn = document.getElementById('toggle-btn');
+/*const toggleBtn = document.getElementById('toggle-btn');
 const tips = document.getElementById('tips');
 
 toggleBtn.addEventListener('click', () => {
   tips.classList.toggle('hidden');
-});
+});*/
 
 
  // Password Strength Checker
-        document.getElementById('password-input').addEventListener('input', function() {
-            const password = this.value;
-            let strength = 0;
-            let strengthText = 'Débil';
-            let strengthColor = 'bg-red-500';
-            let width = 20;
+document.getElementById('contra-input').addEventListener('input', function() {
+        const password = this.value;
+        console.log(passwordInput.value);
+        let strength = 0;
+        let strengthText = 'Débil';
+        let strengthColor = 'bg-red-500';
+        let width = 20;
+        // Length check
+        if (password.length >= 8) strength += 1;
+        if (password.length >= 12) strength += 1;
             
-            // Length check
-            if (password.length >= 8) strength += 1;
-            if (password.length >= 12) strength += 1;
-            
-            // Character variety checks
-            if (/[a-z]/.test(password)) strength += 1;
-            if (/[A-Z]/.test(password)) strength += 1;
-            if (/[0-9]/.test(password)) strength += 1;
-            if (/[^A-Za-z0-9]/.test(password)) strength += 1;
-            
+        // Character variety checks
+        if (/[a-z]/.test(password)) strength += 1;
+        if (/[A-Z]/.test(password)) strength += 1;
+        if (/[0-9]/.test(password)) strength += 1;
+        if (/[^A-Za-z0-9]/.test(password)) strength += 1;
+          
             // Determine strength level
-            if (strength >= 5) {
-                strengthText = 'Muy Fuerte';
-                strengthColor = 'bg-green-500';
-                width = 100;
-            } else if (strength >= 4) {
-                strengthText = 'Fuerte';
-                strengthColor = 'bg-green-400';
-                width = 80;
-            } else if (strength >= 3) {
-                strengthText = 'Moderada';
-                strengthColor = 'bg-yellow-500';
-                width = 60;
-            } else if (strength >= 2) {
-                strengthText = 'Débil';
-                strengthColor = 'bg-orange-500';
-                width = 40;
-            }
+        if (strength >= 5) {
+            strengthText = 'Muy Fuerte';
+            strengthColor = 'bg-green-500';
+            width = 100;
+        } else if (strength >= 4) {
+            strengthText = 'Fuerte';
+            strengthColor = 'bg-green-400';
+            width = 80;
+        } else if (strength >= 3) {
+            strengthText = 'Moderada';
+            strengthColor = 'bg-yellow-500';
+            width = 60;
+        } else if (strength >= 2) {
+            strengthText = 'Débil';
+            strengthColor = 'bg-orange-500';
+            width = 40;
+        }
             
             // Update UI
             document.getElementById('password-strength-text').textContent = strengthText;
