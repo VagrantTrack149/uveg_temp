@@ -29,10 +29,11 @@ toggleBtn.addEventListener('click', () => {
 });*/
 
 
+        
  // Password Strength Checker
 document.getElementById('contra-input').addEventListener('input', function() {
         const password = this.value;
-        console.log(passwordInput.value);
+        console.log(password);
         let strength = 0;
         let strengthText = 'Débil';
         let strengthColor = 'bg-red-500';
