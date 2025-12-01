@@ -7,7 +7,8 @@ app.use(express.static(path.join(__dirname, 'src')));
 
 // Ruta principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/index.html'));
+  //res.sendFile(path.join(__dirname, 'src/index.html'));
+  res.sendFile(path.join(process.cwd(), 'src/index.html'));
 });
 
 app.use('/pages', express.static(path.join(__dirname, 'src', 'Pages')));
