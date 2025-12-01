@@ -8,7 +8,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "build:css": "npx tailwindcss -i ./src/styles/input.css -o ./public/css/styles.css --watch",
+    "build:css:watch": "npx tailwindcss -i ./src/styles/input.css -o ./public/css/styles.css --watch",
+    "build:css": "npx tailwindcss -i ./src/styles/input.css -o ./public/css/styles.css",
+    "build": "npm run build:css",
     "start": "node server.js",
     "devdev": "nodemon server.js & npx tailwindcss -i ./src/styles/input.css -o ./public/css/styles.css --watch"
   },
