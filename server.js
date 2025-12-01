@@ -19,7 +19,11 @@ app.get('/quiz', (req, res) => {
 app.get('/introduccion', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/pages/leccion1.html'));
 });
-
+/*
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+});*/
+
+module.exports = app;
+
+//
